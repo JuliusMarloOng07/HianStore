@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顯HianStore | Top Up Game Terpercaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-red: #e60000;
+            --dark-bg: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --text-white: #ffffff;
+            --text-gray: #b3b3b3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: rgba(13, 13, 13, 0.95);
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-red);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--primary-red);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-white);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .btn-whatsapp {
+            background: var(--primary-red);
+            padding: 8px 20px;
+            border-radius: 4px;
+            color: white !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            text-align: center;
+        }
+
+        .hero-content {
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary-red);
+            text-shadow: 0 0 15px rgba(230, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(230, 0, 0, 0.6);
+        }
+
+        /* Pricelist Section Baru */
+        .pricelist {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        .section-title span {
+            color: var(--primary-red);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-red); /* Garis merah tegas di atas */
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(230, 0, 0, 0.15);
+        }
+
+        .game-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--text-white);
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+
+        .price-list {
+            list-style: none;
+            flex-grow: 1; /* Biar posisi tombol seragam di bawah */
+            margin-bottom: 25px;
+        }
+
+        .price-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #333; /* Garis putus-putus ala struk */
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+
+        .price-list li span:last-child {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .btn-buy {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid var(--primary-red);
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-buy:hover {
+            background: var(--primary-red);
+            color: var(--text-white);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid #262626;
+            background: #050505;
+        }
+
+        footer span {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero { height: 60vh; }
+        }
+        
+       .brand-icons img {
+    height: 50px; /* Atur tinggi sesuai selera lo */
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">顯Hian<span>Store</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#pricelist">Pricelist</a></li>
+                    <li><a href="https://wa.me/628xxxxxxxxxx" class="btn-whatsapp">WhatsApp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>TOP UP <br><span>TERPERCAYA</span></h1>
+                
+                <p>Top up Diamond Mobile Legends & game lainnya. Aman, murah, dan instan.</p>
+
+<div class="brand-icons">
+    <img src="mlbb.jpeg" alt="MLBB">
+    <img src="ff.jpeg" alt="FF">
+</div>
+
+                <p>Pricelist update setiap hari.</p>
+                <p>OPEN 09.00-22.00</p>
+                <a href="#pricelist" class="btn-primary">Cek Pricelist</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricelist" class="pricelist">
+        <div class="container">
+            <h2 class="section-title">DAFTAR <span>HARGA</span></h2>
+            <div class="grid-container">
+
+                <div class="game-card">
+                    <div class="game-title">Mobile Legends</div>
+                    <ul class="price-list">
+                        <li><span>86 Diamonds</span> <span>Rp 20.000</span></li>
+                        <li><span>257 Diamonds</span> <span>Rp 60.000</span></li>
+                        <li><span>706 Diamonds</span> <span>Rp 160.000</span></li>
+                    </ul>
+                    <a href="https://wa.me/6281586905593?text=Halo+min,+saya+mau+top+up+Mobile+Legends+sebesar+...+" class="btn-buy" target="_blank">Top Up MLBB</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-title">Free Fire</div>
+                    <ul class="price-list">
+                        <li><span>70 Diamonds</span> <span>Rp 10.000</span></li>
+                        <li><span>140 Diamonds</span> <span>Rp 20.000</span></li>
+                        <li><span>355 Diamonds</span> <span>Rp 50.000</span></li>
+                    </ul>
+                    <a href="https://wa.me/6281586905593?text=Halo+min,+saya+mau+top+up+Free+Fire+sebesar+...+" class="btn-buy" target="_blank">Top Up FF</a>
+                </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <span>顯HianStore</span>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
